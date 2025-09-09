@@ -2,17 +2,17 @@ import React from "react";
 import { DATA } from "../data";
 import { Mail } from "lucide-react";
 
-export default function Contact(){
+export default function Contact() {
   return (
-    <section id="contact" className="py-12">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="p-6 border rounded-2xl flex items-center gap-6">
-          <img src="/Passport_size_1.jpg" alt="portrait" className="w-20 h-20 object-cover rounded-lg" />
-          <div>
-            <h3 className="text-xl font-semibold">Let's build something reliable & fast.</h3>
-            <p className="text-sm text-black/70 mt-1">Open to collaborations and roles in frontend, AEM, and ML infra.</p>
-            <div className="mt-4 flex gap-3">
-              <a href={`mailto:${DATA.email}`} className="px-4 py-2 bg-black text-white rounded-xl inline-flex items-center gap-2"><Mail size={14}/> {DATA.email}</a>
+    <section id="contact" className="w-full py-20 bg-sweep bg-[length:200%_200%] animate-sweep">
+      <div className="max-w-wide mx-auto px-6">
+        <div className="rounded-2xl bg-white/90 backdrop-blur p-7 md:p-8 shadow-soft flex flex-col md:flex-row items-center gap-6">
+          <img src="/Passport_size_1.jpg" alt="portrait" className="w-24 h-24 object-cover rounded-xl ring-2 ring-white/70" />
+          <div className="text-center md:text-left">
+            <h3 className="text-2xl md:text-3xl font-semibold">Let’s build something reliable & fast.</h3>
+            <p className="text-base text-black/70 mt-2">Open to collaborations and roles in frontend, AEM, and ML infra.</p>
+            <div className="mt-5">
+              <a href={`mailto:${DATA.email}`} className="btn"><Mail size={18}/> {DATA.email}</a>
             </div>
           </div>
         </div>
