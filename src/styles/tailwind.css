@@ -2,22 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Global typography scale */
 @layer base {
   html, body { @apply bg-white text-black font-[Inter] antialiased; }
-  html { font-size: 16px; }        /* mobile */
-  @screen md { html { font-size: 17px; } }  /* tablets */
-  @screen lg { html { font-size: 18px; } }  /* desktops */
+  /* Fluid root font size between 16px and ~18px */
+  html { font-size: clamp(16px, 1.2vw + 14px, 18px); }
 }
 
-/* Single-color buttons (larger) */
 .btn {
-  @apply inline-flex items-center gap-2 rounded-2xl px-5 py-2.5
-         text-[0.98rem] md:text-base font-semibold text-white
-         bg-brand hover:bg-brandDark transition shadow-soft;
+  @apply inline-flex items-center gap-2 rounded-2xl px-5 py-2.5 text-[0.98rem] md:text-base font-semibold
+         text-white bg-brand hover:bg-brandDark transition shadow-soft;
 }
 .btn-ghost {
-  @apply inline-flex items-center gap-2 rounded-2xl px-5 py-2.5
-         text-[0.98rem] md:text-base font-semibold
+  @apply inline-flex items-center gap-2 rounded-2xl px-5 py-2.5 text-[0.98rem] md:text-base font-semibold
          border border-black/15 hover:bg-black hover:text-white transition;
 }

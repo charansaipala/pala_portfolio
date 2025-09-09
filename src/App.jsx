@@ -8,14 +8,20 @@ import Contact from "./components/Contact";
 export default function App() {
   return (
     <div className="min-h-screen bg-white text-black">
+      {/* Keyboard users can jump past the header */}
+      <a href="#main" className="skip-link">Skip to content</a>
+
       <Header />
-      <main className="w-full">
+
+      {/* Main landmark with an id for the skip link */}
+      <main id="main" role="main" className="w-full">
         <Hero />
         <Experience />
         <Skills />
         <Contact />
       </main>
-      <footer className="py-10 text-center text-sm text-black/60">
+
+      <footer role="contentinfo" className="py-10 text-center text-sm text-black/60">
         © {new Date().getFullYear()} Charan Sai Pala
       </footer>
     </div>
