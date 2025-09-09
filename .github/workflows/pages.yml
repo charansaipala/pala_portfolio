@@ -2,8 +2,8 @@ name: Deploy Vite site to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
-  workflow_dispatch:
+    branches: [ main ]   # run automatically on every push to main
+  workflow_dispatch:     # still allow manual runs
 
 permissions:
   contents: read
